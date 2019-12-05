@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/swing4.ogg-280b3f7f0285e09744f074cbc8134723.oggstr"
+
+[deps]
+
+source_file="res://sounds/characters/swing4.ogg"
+dest_files=[ "res://.import/swing4.ogg-280b3f7f0285e09744f074cbc8134723.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

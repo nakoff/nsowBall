@@ -1,0 +1,236 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/characters/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://textures/interfejs copy.png" type="Texture" id=2]
+[ext_resource path="res://textures/Snow  x mas Moon_background 4.png" type="Texture" id=3]
+[ext_resource path="res://textures/fence1.png" type="Texture" id=4]
+[ext_resource path="res://textures/barren tree.png" type="Texture" id=5]
+[ext_resource path="res://textures/fence.png" type="Texture" id=6]
+[ext_resource path="res://textures/fence2.png" type="Texture" id=7]
+[ext_resource path="res://textures/spruce_snow.png" type="Texture" id=8]
+[ext_resource path="res://scenes/characters/enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/level1.gd" type="Script" id=10]
+[ext_resource path="res://textures/bullets/snow.png" type="Texture" id=11]
+[ext_resource path="res://scenes/ui/notify.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 693.959, 26.737 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 389.823, 26.737 )
+
+[node name="level1" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 685.541, 454.172 )
+scale = Vector2( 1.40922, 1.43236 )
+texture = ExtResource( 2 )
+
+[node name="particle" type="CPUParticles2D" parent="bg"]
+position = Vector2( -12.5483, -343.082 )
+z_index = -1
+amount = 20
+lifetime = 8.0
+fixed_fps = 30
+texture = ExtResource( 11 )
+emission_shape = 2
+emission_rect_extents = Vector2( 500, 1 )
+direction = Vector2( 1, 10 )
+spread = 0.0
+gravity = Vector2( 0, 20 )
+initial_velocity = 25.64
+initial_velocity_random = 1.0
+tangential_accel = 21.37
+tangential_accel_random = 1.0
+scale_amount = 0.1
+scale_amount_random = 0.21
+color = Color( 0.670588, 0.670588, 0.670588, 1 )
+
+[node name="Snow  x mas Moon_background 4" type="Sprite" parent="bg"]
+show_behind_parent = true
+position = Vector2( 150.032, -23.8987 )
+scale = Vector2( 0.62101, 0.62101 )
+texture = ExtResource( 3 )
+
+[node name="barren tree" type="Sprite" parent="bg"]
+position = Vector2( -423.258, 34.4024 )
+scale = Vector2( 0.844814, 0.844814 )
+texture = ExtResource( 5 )
+
+[node name="barren tree2" type="Sprite" parent="bg"]
+position = Vector2( 67.3801, 36.1142 )
+scale = Vector2( 0.464593, 0.618723 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="fence1" type="Sprite" parent="bg"]
+position = Vector2( -458.258, 97.3778 )
+scale = Vector2( 0.754969, 0.754969 )
+texture = ExtResource( 4 )
+
+[node name="fence" type="Sprite" parent="bg/fence1"]
+position = Vector2( 126.836, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence2" type="Sprite" parent="bg/fence1"]
+position = Vector2( 253.726, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence3" type="Sprite" parent="bg/fence1"]
+position = Vector2( 375.916, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence4" type="Sprite" parent="bg/fence1"]
+position = Vector2( 502.806, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence5" type="Sprite" parent="bg/fence1"]
+position = Vector2( 624.056, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence6" type="Sprite" parent="bg/fence1"]
+position = Vector2( 751.886, 0.995422 )
+texture = ExtResource( 7 )
+
+[node name="fence9" type="Sprite" parent="bg/fence1"]
+position = Vector2( 953.97, 0.995422 )
+texture = ExtResource( 4 )
+
+[node name="fence8" type="Sprite" parent="bg/fence1"]
+position = Vector2( 1075.22, 0.995422 )
+texture = ExtResource( 6 )
+
+[node name="fence7" type="Sprite" parent="bg/fence1"]
+position = Vector2( 1203.05, 0.995422 )
+texture = ExtResource( 7 )
+
+[node name="fence10" type="Sprite" parent="bg/fence1"]
+position = Vector2( 835.285, 0.985352 )
+texture = ExtResource( 6 )
+
+[node name="fence2" type="Sprite" parent="bg"]
+modulate = Color( 0.9, 0.9, 0.9, 1 )
+position = Vector2( -458.258, 218.856 )
+scale = Vector2( 0.754969, 0.754969 )
+z_index = 1
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="fence" type="Sprite" parent="bg/fence2"]
+position = Vector2( 118.377, 0.995422 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence2" type="Sprite" parent="bg/fence2"]
+position = Vector2( 244.327, 0.995422 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence3" type="Sprite" parent="bg/fence2"]
+position = Vector2( 372.118, -11.9612 )
+rotation = -0.255892
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence4" type="Sprite" parent="bg/fence2"]
+position = Vector2( 499.986, 0.995422 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence5" type="Sprite" parent="bg/fence2"]
+position = Vector2( 624.056, 0.995422 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence6" type="Sprite" parent="bg/fence2"]
+position = Vector2( 706.769, 0.995422 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="fence9" type="Sprite" parent="bg/fence2"]
+position = Vector2( 953.97, 0.995422 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="fence8" type="Sprite" parent="bg/fence2"]
+position = Vector2( 1075.22, 0.995422 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="fence7" type="Sprite" parent="bg/fence2"]
+position = Vector2( 1193.65, 0.995422 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="fence10" type="Sprite" parent="bg/fence2"]
+position = Vector2( 835.285, 0.985352 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="spruce_snow" type="Sprite" parent="bg"]
+show_behind_parent = true
+position = Vector2( 3.82877, 106.745 )
+scale = Vector2( 0.673292, 0.632482 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="collisions" type="Node2D" parent="."]
+
+[node name="floor" type="StaticBody2D" parent="collisions"]
+position = Vector2( 680, -10 )
+
+[node name="shape" type="CollisionShape2D" parent="collisions/floor"]
+position = Vector2( -1, -18 )
+rotation = 3.14159
+shape = SubResource( 1 )
+one_way_collision = true
+one_way_collision_margin = 0.0
+
+[node name="wall" type="StaticBody2D" parent="collisions"]
+position = Vector2( -40, 380 )
+rotation = -1.57079
+
+[node name="shape" type="CollisionShape2D" parent="collisions/wall"]
+position = Vector2( 9.15527e-05, 14 )
+shape = SubResource( 2 )
+
+[node name="wall3" type="StaticBody2D" parent="collisions"]
+position = Vector2( 749, 865 )
+rotation = -1.57079
+
+[node name="shape" type="CollisionShape2D" parent="collisions/wall3"]
+position = Vector2( -40.0001, -59.9999 )
+shape = SubResource( 2 )
+
+[node name="wall2" type="StaticBody2D" parent="collisions"]
+position = Vector2( 1390, 380 )
+rotation = -1.57079
+
+[node name="shape" type="CollisionShape2D" parent="collisions/wall2"]
+shape = SubResource( 2 )
+
+[node name="floor2" type="StaticBody2D" parent="collisions"]
+position = Vector2( 680, 730 )
+
+[node name="shape" type="CollisionShape2D" parent="collisions/floor2"]
+position = Vector2( -5, 0 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152.362, 662.504 )
+p_notify = NodePath("../layer/notify")
+
+[node name="Enemy" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1333.74, 664.821 )
+
+[node name="tween" type="Tween" parent="."]
+
+[node name="camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="layer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="notify" parent="layer" instance=ExtResource( 12 )]

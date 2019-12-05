@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/magic1.ogg-9c51877261224d0620a41f92de7a95a6.oggstr"
+
+[deps]
+
+source_file="res://sounds/bonuses/magic1.ogg"
+dest_files=[ "res://.import/magic1.ogg-9c51877261224d0620a41f92de7a95a6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

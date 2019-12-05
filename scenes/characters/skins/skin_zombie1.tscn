@@ -1,0 +1,195 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://textures/characters/zombie1/body.png" type="Texture" id=1]
+[ext_resource path="res://textures/characters/zombie1/body_2.png" type="Texture" id=2]
+[ext_resource path="res://textures/characters/zombie1/right_art.png" type="Texture" id=3]
+[ext_resource path="res://textures/characters/zombie1/head2.png" type="Texture" id=4]
+[ext_resource path="res://textures/characters/zombie1/right_leg.png" type="Texture" id=5]
+[ext_resource path="res://textures/characters/zombie1/right_sholder.png" type="Texture" id=6]
+[ext_resource path="res://textures/characters/zombie1/left_hand.png" type="Texture" id=7]
+[ext_resource path="res://textures/characters/zombie1/neck.png" type="Texture" id=8]
+[ext_resource path="res://textures/characters/zombie1/hand.png" type="Texture" id=9]
+[ext_resource path="res://textures/characters/zombie1/left_arm.png" type="Texture" id=10]
+[ext_resource path="res://textures/characters/zombie1/left_sholder.png" type="Texture" id=11]
+[ext_resource path="res://textures/characters/zombie1/left_leg.png" type="Texture" id=12]
+[ext_resource path="res://textures/characters/zombie1/left_leg_down.png" type="Texture" id=13]
+[ext_resource path="res://textures/characters/zombie1/right_leg_down.png" type="Texture" id=14]
+[ext_resource path="res://textures/characters/zombie1/right_feet.png" type="Texture" id=15]
+[ext_resource path="res://textures/characters/zombie1/left_feet.png" type="Texture" id=16]
+
+[node name="skin" type="Node2D"]
+scale = Vector2( 0.1, 0.1 )
+
+[node name="chip" type="Sprite" parent="."]
+position = Vector2( 14.0436, 66.1885 )
+texture = ExtResource( 2 )
+offset = Vector2( -3.06452, -48.2899 )
+
+[node name="right_leg" type="Sprite" parent="chip"]
+position = Vector2( 91.4196, -37.9837 )
+rotation = -0.163821
+texture = ExtResource( 5 )
+offset = Vector2( 16.6556, 49.9667 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="right_leg_down" type="Sprite" parent="chip/right_leg"]
+show_behind_parent = true
+position = Vector2( 36.988, 171.336 )
+rotation = 0.462478
+texture = ExtResource( 14 )
+offset = Vector2( 3.70117, 75.8753 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="right_feet" type="Sprite" parent="chip/right_leg/right_leg_down"]
+position = Vector2( 12.9542, 172.107 )
+rotation = -0.317025
+texture = ExtResource( 15 )
+offset = Vector2( 57.3693, 33.3111 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Node2D" type="Node2D" parent="chip/right_leg/right_leg_down/right_feet"]
+position = Vector2( 148.934, 69.071 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="left_leg" type="Sprite" parent="chip"]
+position = Vector2( -100.707, -85.9268 )
+rotation = -0.413204
+texture = ExtResource( 12 )
+offset = Vector2( 9.76344, 124.765 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="left_leg_down" type="Sprite" parent="chip/left_leg"]
+show_behind_parent = true
+position = Vector2( 13.679, 265.087 )
+rotation = 0.898454
+texture = ExtResource( 13 )
+offset = Vector2( 0, 74.714 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="left_feet" type="Sprite" parent="chip/left_leg/left_leg_down"]
+position = Vector2( -10.5486, 158.228 )
+rotation = -0.523598
+texture = ExtResource( 16 )
+offset = Vector2( 63.2911, 35.1617 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Node2D" type="Node2D" parent="chip/left_leg/left_leg_down/left_feet"]
+position = Vector2( 146.776, 71.2296 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="body_piv" type="Position2D" parent="chip"]
+position = Vector2( 14.2397, -64.0782 )
+
+[node name="body" type="Sprite" parent="chip"]
+position = Vector2( 12.3801, -64.8958 )
+rotation = 0.0625269
+texture = ExtResource( 1 )
+offset = Vector2( -6.68988, -145.79 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="neck" type="Sprite" parent="chip/body"]
+position = Vector2( -7.55261, -302.104 )
+texture = ExtResource( 8 )
+
+[node name="left_sholder" type="Sprite" parent="chip/body"]
+position = Vector2( -116.881, -223.51 )
+rotation = 0.173484
+texture = ExtResource( 11 )
+offset = Vector2( -67.2048, 103.506 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="left_arm" type="Sprite" parent="chip/body/left_sholder"]
+show_behind_parent = true
+position = Vector2( -106.628, 200.953 )
+rotation = -0.283499
+texture = ExtResource( 10 )
+offset = Vector2( -2.0506, 77.9208 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="left_hand" type="Sprite" parent="chip/body/left_sholder/left_arm"]
+position = Vector2( 4.10107, 170.195 )
+rotation = -0.523598
+texture = ExtResource( 7 )
+offset = Vector2( 2.05054, 43.0614 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Node2D" type="Node2D" parent="chip/body/left_sholder/left_arm/left_hand"]
+position = Vector2( 2.15845, 90.6558 )
+rotation = 2.52499
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="head" type="Sprite" parent="chip/body"]
+position = Vector2( -20.0423, -349.665 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -30.8504, -175.15 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Node2D" type="Node2D" parent="chip/body/head"]
+position = Vector2( -60.4371, -349.672 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="right_sholder" type="Sprite" parent="chip/body"]
+show_behind_parent = true
+position = Vector2( 101.418, -230.951 )
+rotation = 0.219694
+texture = ExtResource( 6 )
+offset = Vector2( 52.7427, 101.969 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="right_art" type="Sprite" parent="chip/body/right_sholder"]
+show_behind_parent = true
+position = Vector2( 94.9368, 184.599 )
+rotation = -1.74856
+texture = ExtResource( 3 )
+offset = Vector2( 17.5808, 82.6301 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="hand" type="Sprite" parent="chip/body/right_sholder/right_art"]
+position = Vector2( 49.2263, 182.841 )
+rotation = -0.502408
+texture = ExtResource( 9 )
+offset = Vector2( 5.27429, 47.4683 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Node2D" type="Node2D" parent="chip/body/right_sholder/right_art/hand"]
+position = Vector2( 21.5847, 101.448 )
+__meta__ = {
+"_edit_bone_": true
+}

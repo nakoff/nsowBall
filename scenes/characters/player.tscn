@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/characters/player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/characters/skins/skin_santa1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ui/character_ui.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 17.147
+height = 9.66791
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+p_body = NodePath("skin/chip/body")
+p_bullet_piv = NodePath("skin/chip/body/left_sholder/left_arm/hand/piv")
+p_anim_arms = NodePath("skin/anim_arms")
+p_anim_legs = NodePath("skin/anim_legs")
+p_ui = NodePath("ui")
+
+[node name="skin" parent="." instance=ExtResource( 2 )]
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( 5.14502, 3.60577 )
+shape = SubResource( 1 )
+
+[node name="ui" parent="." instance=ExtResource( 3 )]
+
+[node name="tween" type="Tween" parent="."]
+
+[editable path="skin"]
